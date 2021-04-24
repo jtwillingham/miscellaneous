@@ -1,4 +1,4 @@
-input_dir <- "/Users/jewillin/Downloads/"
+input_dir <- "/Users/willingham/Downloads/"
 
 options(warn = -1)
 my_packages <- c("dplyr", "magrittr", "stringr")
