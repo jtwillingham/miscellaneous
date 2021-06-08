@@ -15,6 +15,7 @@ load_followers <- tibble(connection = str_squish(scan(followers, what = characte
 followers_start <- func_start_row("People who most recently followed you", load_followers)
 followers_df <- load_followers[followers_start:nrow(load_followers), ] %>%
   dplyr::filter(!grepl("followers", connection)) %>%
+  dplyr::filter(!grepl("Followed", connection)) %>%
   dplyr::filter(row_number() %% 3 == 1)
 
 following <- paste(input_dir, "following.txt", sep = "")
